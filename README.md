@@ -25,3 +25,6 @@ The data used in this project is **hardcoded** and does not represent real infor
 ## 🚀 Deployment iOS  
 To test the application on iOS, follow this link:  
 https://webapp.diawi.com/install/aZ42jT
+
+## 🖼 App Preview  
+![App Screenshot](./assets/screenshot.png)
