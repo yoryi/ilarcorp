@@ -7,7 +7,7 @@ const data = [
   { value: 35, color: colors.gray80 },
   { value: 15, color: colors.green10 },
   { value: 25, color: colors.yellow },
-  { value: 25, color:  'orange' },
+  { value: 25, color:  colors.green10 },
 ];
 
 const PieChartSVG = () => {
