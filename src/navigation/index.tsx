@@ -1,3 +1,4 @@
+import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { Graphics, Tables } from "@features/index";
@@ -5,7 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 import colors from "@theme/colors";
 
 const Tab = createBottomTabNavigator();
-function MenuTabs() {
+const MenuTabs: React.FC = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -34,6 +35,5 @@ function MenuTabs() {
       </Tab.Navigator>
     </NavigationContainer>
   );
-}
-
+};
 export default MenuTabs;

@@ -1,7 +1,8 @@
+import React from "react";
 import { InfoTable } from "../components";
 import { SafeAreaView, Space, Title } from "@theme/container";
 
-export default function Tables() {
+const Tables: React.FC = () => {
   return (
     <SafeAreaView>
       <Space $height={30} />
@@ -10,4 +11,6 @@ export default function Tables() {
       <InfoTable />
     </SafeAreaView>
   );
-}
+};
+
+export default Tables;
