@@ -4,7 +4,7 @@ import Svg, { Circle, Text as TextSVG } from "react-native-svg";
 
 const ReportScore = ({ score }: { score: number }) => {
   const size = 100;
-  const strokeWidth = 5;
+  const strokeWidth = 9;
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const progress = (score / 100) * circumference;
@@ -54,7 +54,7 @@ const ReportScore = ({ score }: { score: number }) => {
             transform={`rotate(-90 ${size / 2} ${size / 2})`}
           />
           <TextSVG
-            x={size / 4.5}
+            x={size / 3.5}
             y={size / 1.7}
             fill="white"
             fontSize="20"

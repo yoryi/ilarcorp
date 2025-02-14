@@ -1,8 +1,9 @@
 import styled from 'styled-components/native';
 import colors from '@theme/colors';
 
-export const SafeArea = styled.SafeAreaView`
+export const SafeAreaView = styled.SafeAreaView`
   flex: 1;
+  width: 90%;
 `;
 
 export const Container = styled.View`

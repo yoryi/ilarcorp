@@ -1,10 +1,10 @@
 import { ScrollView } from "react-native";
-import { SafeArea, Space, Title } from "../theme";
+import { SafeAreaView, Space, Title } from "@theme/container";
 import { BarChart, PieChart, ReportScore, SalesReport, BankLineChart } from "../components";
 
 const Graphics: React.FC = () => {
   return (
-    <SafeArea>
+    <SafeAreaView>
       <Space $height={30} />
       <Title>Dashboard</Title>
       <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingVertical: 40 }}>
@@ -18,7 +18,7 @@ const Graphics: React.FC = () => {
         <Space $height={20} />
         <BankLineChart />
       </ScrollView>
-    </SafeArea>
+    </SafeAreaView>
   );
 };
 

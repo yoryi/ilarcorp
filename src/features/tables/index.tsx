@@ -1,5 +1,5 @@
-import { Container } from './theme';
 import TablesScreen from './screens';
+import { Container } from '@theme/container';
 import { StatusBar } from 'expo-status-bar';
 
 const Tables: React.FC = () => {

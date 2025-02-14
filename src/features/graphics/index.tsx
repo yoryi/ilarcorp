@@ -1,6 +1,6 @@
-import { Container } from './theme';
 import GraphicsScreen from './screens';
 import { StatusBar } from 'expo-status-bar';
+import { Container } from '@theme/container';
 
 const Graphics: React.FC = () => {
   return (

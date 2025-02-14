@@ -1,8 +1,13 @@
-import { View } from 'react-native';
+import { InfoTable } from "../components";
+import { SafeAreaView, Space, Title } from "@theme/container";
 
 export default function Tables() {
   return (
-    <View>
-    </View>
+    <SafeAreaView>
+      <Space $height={30} />
+      <Title>Table</Title>
+      <Space $height={30} />
+      <InfoTable />
+    </SafeAreaView>
   );
 }

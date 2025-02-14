@@ -42,7 +42,7 @@ const PieChartSVG = () => {
       <Path
         key={index}
         d={pathData}
-        strokeWidth={2}
+        strokeWidth={7}
         fill={item.color}
         stroke={colors.gray50}
       />
