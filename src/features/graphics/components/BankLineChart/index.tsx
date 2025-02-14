@@ -29,7 +29,7 @@ const BankLineChart = () => {
             stroke="lightgray"
             strokeWidth="4"
           />
-          <Line x1={x1} y1={y1} x2={x2} y2={y2} stroke={colors.yellow} strokeWidth="4" />
+          <Line x1={x1} y1={y1} x2={x2} y2={y2} stroke={colors.orange} strokeWidth="4" />
         </Svg>
       </ChartContainer>
     </Container>
