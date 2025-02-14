@@ -27,4 +27,4 @@ To test the application on iOS, follow this link:
 https://webapp.diawi.com/install/aZ42jT
 
 ## 🖼 App Preview  
-![App Screenshot](./src/assets/screenshot.png)
+<img src="./src/assets/screenshot.png" alt="App Preview" width="200"/>
