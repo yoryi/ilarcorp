@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import styled from "styled-components/native";
 import Svg, { Circle, Text as TextSVG } from "react-native-svg";
 
 const ReportScore = ({ score }: { score: number }) => {
@@ -16,22 +16,12 @@ const ReportScore = ({ score }: { score: number }) => {
   };
 
   return (
-    <View
-      style={{
-        backgroundColor: "#1C1C1E",
-        height: 200,
-        paddingLeft: 25,
-        paddingRight: 25,
-        borderRadius: 15,
-      }}
-    >
-      <View style={{ paddingBottom: 10, paddingTop: 20 }}>
-        <Text style={{ color: "white", fontWeight: "bold", fontSize: 16 }}>
-          ReportScore
-        </Text>
-        <Text style={{ color: "white", fontSize: 10 }}>Statistics</Text>
-      </View>
-      <View style={{ justifyContent: "center", alignItems: "center" }}>
+    <Container>
+      <Header>
+        <Title>ReportScore</Title>
+        <Subtitle>Statistics</Subtitle>
+      </Header>
+      <ChartContainer>
         <Svg height={size} width={size} viewBox={`0 0 ${size} ${size}`}>
           <Circle
             cx={size / 2}
@@ -63,9 +53,38 @@ const ReportScore = ({ score }: { score: number }) => {
             {score}%
           </TextSVG>
         </Svg>
-      </View>
-    </View>
+      </ChartContainer>
+    </Container>
   );
 };
+
+const Container = styled.View`
+  background-color: #1c1c1e;
+  height: 200px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 15px;
+`;
+
+const Header = styled.View`
+  padding-bottom: 10px;
+  padding-top: 20px;
+`;
+
+const Title = styled.Text`
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+`;
+
+const Subtitle = styled.Text`
+  color: white;
+  font-size: 10px;
+`;
+
+const ChartContainer = styled.View`
+  justify-content: center;
+  align-items: center;
+`;
 
 export default ReportScore;

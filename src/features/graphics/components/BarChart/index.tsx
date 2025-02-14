@@ -1,8 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-import colors from '@theme/colors';
+import styled from 'styled-components/native';
 import Svg, { Rect, Text as TextSVG } from "react-native-svg";
-
+import colors from '@theme/colors';
 
 const data = [50, 10, 40, 10, 85, 67, 35, 53, 24, 50];
 export default function PieChart() {
@@ -12,19 +11,11 @@ export default function PieChart() {
   const chartWidth = data.length * (barWidth + spacing);
 
   return (
-    <View
-      style={{
-        backgroundColor: "#1C1C1E",
-        height: 200,
-        paddingLeft: 25,
-        paddingRight: 25,
-        borderRadius: 15,
-      }}
-    >
-      <View style={{paddingBottom: 20, paddingTop: 20}}>
-        <Text style={{color: 'white', fontWeight: 'bold', fontSize: 16}}>BarChart</Text>
-        <Text style={{color: 'white', fontSize: 10}}>Statistics</Text>
-      </View>
+    <Container>
+      <Header>
+        <Title>BarChart</Title>
+        <Subtitle>Statistics</Subtitle>
+      </Header>
       <Svg height="130" width={chartWidth}>
         {data.map((value, index) => {
           const barHeight = (value / 100) * chartHeight;
@@ -50,6 +41,30 @@ export default function PieChart() {
           );
         })}
       </Svg>
-    </View>
+    </Container>
   );
 }
+
+const Container = styled.View`
+  background-color: #1c1c1e;
+  height: 200px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 15px;
+`;
+
+const Header = styled.View`
+  padding-bottom: 20px;
+  padding-top: 20px;
+`;
+
+const Title = styled.Text`
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+`;
+
+const Subtitle = styled.Text`
+  color: white;
+  font-size: 10px;
+`;

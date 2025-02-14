@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import styled from "styled-components/native";
 import Svg, { Circle, Polyline, Line, Text as SvgText } from "react-native-svg";
 
 const salesData = [500, 700, 1200, 900, 1900, 1100];
@@ -22,21 +22,11 @@ const SalesReport = () => {
   });
 
   return (
-    <View
-      style={{
-        backgroundColor: "#1C1C1E",
-        height: 200,
-        paddingLeft: 30,
-        paddingRight: 25,
-        borderRadius: 15,
-      }}
-    >
-      <View style={{ paddingBottom: 10, paddingTop: 20 }}>
-        <Text style={{ color: "white", fontWeight: "bold", fontSize: 16 }}>
-          Sales Report
-        </Text>
-        <Text style={{ color: "white", fontSize: 10 }}>Statistics</Text>
-      </View>
+    <Container>
+      <Header>
+        <Title>Sales Report</Title>
+        <Subtitle>Statistics</Subtitle>
+      </Header>
       <Svg width={width} height={height}>
         {[0, 0.25, 0.5, 0.75, 1].map((ratio, index) => {
           const y = height - padding - ratio * (height - 2 * padding);
@@ -84,8 +74,32 @@ const SalesReport = () => {
           </React.Fragment>
         ))}
       </Svg>
-    </View>
+    </Container>
   );
 };
+
+const Container = styled.View`
+  background-color: #1c1c1e;
+  height: 200px;
+  padding-left: 30px;
+  padding-right: 25px;
+  border-radius: 15px;
+`;
+
+const Header = styled.View`
+  padding-bottom: 10px;
+  padding-top: 20px;
+`;
+
+const Title = styled.Text`
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+`;
+
+const Subtitle = styled.Text`
+  color: white;
+  font-size: 10px;
+`;
 
 export default SalesReport;
