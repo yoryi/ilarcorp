@@ -1,11 +1,11 @@
 import React from "react";
 import colors from "@theme/colors";
 import { View, Text } from "react-native";
-import Svg, { Path } from "react-native-svg";
+import Svg, { Path, Text as SvgText } from "react-native-svg";
 
 const data = [
-  { value: 30, color: colors.blue50 },
-  { value: 20, color: colors.gray },
+  { value: 35, color: colors.blue50 },
+  { value: 15, color: colors.white },
   { value: 25, color: colors.yellow },
   { value: 25, color: "orange" },
 ];
@@ -37,15 +37,31 @@ const PieChartSVG = () => {
     `;
 
     startAngle = endAngle;
-    
+
+    const midAngle = startAngle - sliceAngle / 2;
+    const textX = centerX + (radius / 2) * Math.cos(midAngle);
+    const textY = centerY + (radius / 2) * Math.sin(midAngle);
+
     return (
-      <Path
-        key={index}
-        d={pathData}
-        strokeWidth={7}
-        fill={item.color}
-        stroke={colors.gray50}
-      />
+      <React.Fragment key={index}>
+        <Path
+          d={pathData}
+          strokeWidth={5}
+          fill={item.color}
+          stroke={colors.gray50}
+        />
+        <SvgText
+          x={textX}
+          y={textY}
+          fill={colors.black}
+          fontSize="8"
+          fontWeight={'bold'}
+          textAnchor="middle"
+          alignmentBaseline="middle"
+        >
+          {item.value + "%"}
+        </SvgText>
+      </React.Fragment>
     );
   });
 
@@ -65,10 +81,10 @@ const PieChartSVG = () => {
         </Text>
         <Text style={{ color: "white", fontSize: 10 }}>Statistics</Text>
       </View>
-      <View style={{justifyContent: 'center', alignItems: 'center'}}>
-      <Svg height="100" width="100">
-        {paths}
-      </Svg>
+      <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+        <Svg height="100" width="100">
+          {paths}
+        </Svg>
       </View>
     </View>
   );
