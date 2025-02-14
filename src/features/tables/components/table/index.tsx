@@ -1,7 +1,7 @@
 import React from "react";
 import colors from "@theme/colors";
-import styled from "styled-components/native";
 import { FlatList } from "react-native";
+import styled from "styled-components/native";
 
 interface DataItem {
   id: string;
@@ -62,18 +62,25 @@ const Row = styled.View`
 `;
 
 const ColumnHeader = styled.Text`
-  font-weight: bold;
   flex: 1;
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 15px;
   color: ${colors.white};
 `;
 
 const Cell = styled.Text`
   flex: 1;
+  padding-top: 10px;
+  font-size: 12px;
+  padding-bottom: 10px;
   color: ${colors.gray80};
 `;
 
 const AcosCell = styled(Cell)`
   font-weight: bold;
+  font-size: 12px;
   color: ${colors.yellow};
 `;
 
