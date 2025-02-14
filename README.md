@@ -21,3 +21,7 @@ The following dependencies were used in this project:
 ## Data Disclaimer
 
 The data used in this project is **hardcoded** and does not represent real information. The main goal was to focus on graphical visualization and UI development.
+
+## 🚀 Deployment iOS  
+To test the application on iOS, follow this link:  
+[📲 Install on iOS](https://webapp.diawi.com/install/aZ42jT)  
