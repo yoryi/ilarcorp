@@ -1,12 +1,12 @@
-import colors from "@theme/colors";
 import React from "react";
+import colors from "@theme/colors";
 import { View, Text } from "react-native";
 import Svg, { Path } from "react-native-svg";
 
 const data = [
-  { value: 30, color: "red" },
-  { value: 20, color: "blue" },
-  { value: 25, color: "green" },
+  { value: 30, color: colors.blue50 },
+  { value: 20, color: colors.gray },
+  { value: 25, color: colors.yellow },
   { value: 25, color: "orange" },
 ];
 

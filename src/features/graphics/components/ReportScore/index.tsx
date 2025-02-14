@@ -4,7 +4,7 @@ import Svg, { Circle, Text as TextSVG } from "react-native-svg";
 
 const ReportScore = ({ score }: { score: number }) => {
   const size = 100;
-  const strokeWidth = 9;
+  const strokeWidth = 5;
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const progress = (score / 100) * circumference;
