@@ -1,3 +1,4 @@
+import colors from "@theme/colors";
 import React from "react";
 import { View, Text } from "react-native";
 import Svg, { Path } from "react-native-svg";
@@ -41,9 +42,9 @@ const PieChartSVG = () => {
       <Path
         key={index}
         d={pathData}
-        fill={item.color}
-        stroke="white"
         strokeWidth={2}
+        fill={item.color}
+        stroke={colors.gray50}
       />
     );
   });
